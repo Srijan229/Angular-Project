@@ -1,0 +1,40 @@
+<div class="driver-section">
+  <h2>Drivers</h2>
+
+  <form (ngSubmit)="addDriver()" #driverForm="ngForm" class="driver-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" [(ngModel)]="newDriver.name" required />
+
+    <label for="team">Team:</label>
+    <input type="text" id="team" name="team" [(ngModel)]="newDriver.team" required />
+
+    <button type="submit">Add Driver</button>
+  </form>
+
+  <button (click)="toggleView()" class="toggle-button">Toggle View</button>
+
+  <!-- Search Input -->
+  <input type="text" placeholder="Search drivers..." [(ngModel)]="searchQuery" (ngModelChange)="searchDrivers()" />
+
+  <div class="driver-list-container">
+    <kendo-grid *ngIf="viewMode === 'grid'" [data]="filteredDrivers" [pageSize]="100" [scrollable]="'scrollable'" [height]="400" [kendoGridBinding]="filteredDrivers">
+      <kendo-grid-column field="name" title="Name" [width]="120"></kendo-grid-column>
+      <kendo-grid-column field="team" title="Team" [width]="150"></kendo-grid-column>
+    </kendo-grid>
+
+    <table *ngIf="viewMode === 'list'" class="list-view">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Team</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let driver of filteredDrivers">
+          <td>{{ driver.name }}</td>
+          <td>{{ driver.team }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

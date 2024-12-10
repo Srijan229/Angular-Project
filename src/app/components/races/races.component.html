@@ -1,0 +1,61 @@
+
+<html>
+  <body>
+  
+<div class="filter-container">
+  <label for="search">Search:</label>
+  <input 
+    id="search" 
+    type="text" 
+    [(ngModel)]="searchText" 
+    placeholder="Search..." 
+    (input)="applyFilter()" 
+  />
+  
+  <label for="filter">Filter by:</label>
+  <select id="filter" [(ngModel)]="selectedFilter" (change)="applyFilter()">
+    <option value="">Select Filter</option>
+    <option value="location">Location</option>
+    <option value="length">Length</option>
+    <option value="turns">Turns</option>
+  </select>
+  
+  <div *ngIf="selectedFilter === 'location'">
+    <label for="location">Location:</label>
+    <select id="location" [(ngModel)]="selectedLocation" (change)="applyFilter()">
+      <option value="">Select Location</option>
+      <option *ngFor="let location of filterOptions.location" [value]="location">{{ location }}</option>
+    </select>
+  </div>
+  
+  <div *ngIf="selectedFilter === 'length'">
+    <label for="minLength">Min Length (km):</label>
+    <input id="minLength" type="number" [(ngModel)]="minLength" (input)="applyFilter()" />
+    
+    <label for="maxLength">Max Length (km):</label>
+    <input id="maxLength" type="number" [(ngModel)]="maxLength" (input)="applyFilter()" />
+  </div>
+  
+  <div *ngIf="selectedFilter === 'turns'">
+    <label for="minTurns">Min Turns:</label>
+    <input id="minTurns" type="number" [(ngModel)]="minTurns" (input)="applyFilter()" />
+    
+    <label for="maxTurns">Max Turns:</label>
+    <input id="maxTurns" type="number" [(ngModel)]="maxTurns" (input)="applyFilter()" />
+  </div>
+
+  <button (click)="clearFilters()">Clear Filters</button>
+</div>
+
+<kendo-grid 
+  [data]="filteredCircuits" 
+  [height]="600" 
+  [style]="{ 'background-color': 'transparent' }"
+>
+  <kendo-grid-column field="name" title="Circuit Name" [width]="250"></kendo-grid-column>
+  <kendo-grid-column field="location" title="Location" [width]="250"></kendo-grid-column>
+  <kendo-grid-column field="length" title="Length (km)" [width]="150"></kendo-grid-column>
+  <kendo-grid-column field="turns" title="Turns" [width]="150"></kendo-grid-column>
+</kendo-grid>
+</body>
+</html>

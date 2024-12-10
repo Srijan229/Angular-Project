@@ -1,0 +1,71 @@
+<!-- Input Form -->
+<body>
+<form (ngSubmit)="addCar()" #carForm="ngForm" class="car-form">
+  <label for="name" class="form-label">Car Name:</label>
+  <input 
+    type="text" 
+    id="name" 
+    name="name" 
+    [(ngModel)]="newCar.name" 
+    required
+    class="form-input"
+  >
+  
+  <label for="team" class="form-label">Team:</label>
+  <input 
+    type="text" 
+    id="team" 
+    name="team" 
+    [(ngModel)]="newCar.team" 
+    required
+    class="form-input"
+  >
+  
+  <label for="imageUrl" class="form-label">Image URL:</label>
+  <input 
+    type="text" 
+    id="imageUrl" 
+    name="imageUrl" 
+    [(ngModel)]="newCar.imageUrl" 
+    required
+    class="form-input"
+  >
+  
+  <label for="description" class="form-label">Description:</label>
+  <textarea 
+    id="description" 
+    name="description" 
+    [(ngModel)]="newCar.description" 
+    required
+    class="form-textarea"
+  ></textarea>
+  
+  <button type="submit" class="submit-button">Add Car</button>
+</form>
+
+<!-- Cars Grid -->
+<div class="cars-grid">
+  <div 
+    *ngFor="let car of cars" 
+    class="car-item" 
+    (click)="selectCar(car)" 
+    (keydown)="onKeyDown($event)" 
+    (keypress)="onKeyPress($event)" 
+    (keyup)="onKeyUp($event)" 
+    tabindex="0"
+  >
+    <img [src]="car.imageUrl" alt="{{ car.name }}" class="car-image">
+    <h3 class="car-name">{{ car.name }}</h3>
+    <p class="car-team">{{ car.team }}</p>
+  </div>
+</div>
+
+<!-- Popup Details -->
+<div *ngIf="selectedCar" class="car-details" tabindex="0">
+  <button class="close-button" (click)="closeDetails()" aria-label="Close Popup">×</button>
+  <h2 class="detail-title">{{ selectedCar.name }}</h2>
+  <img [src]="selectedCar.imageUrl" alt="{{ selectedCar.name }}" class="detail-image">
+  <p class="detail-team"><strong>Team:</strong> {{ selectedCar.team }}</p>
+  <p class="detail-description">{{ selectedCar.description }}</p>
+</div>
+</body>

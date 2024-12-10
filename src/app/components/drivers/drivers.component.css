@@ -1,0 +1,265 @@
+/* Set background image and base styling */
+.driver-section {
+  background: url('https://images4.alphacoders.com/134/1347332.png') no-repeat center center fixed;
+  background-size: cover;
+  padding: 20px;
+  color: #fff; /* Set text color to white for better contrast */
+  border-radius: 10px; /* Add rounded corners for a sharp look */
+}
+
+/* Style for the form */
+.driver-form {
+  background-color: rgba(5, 0, 0, 0.4); /* Semi-transparent red background for form */
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.driver-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.driver-form input {
+  width: 95%;
+  padding: 8px;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  background-color: #fff;
+  color: #000;
+}
+
+.driver-form button {
+  background-color: #e60012; /* Bright red button */
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.driver-form button:hover {
+  background-color: #c70039; /* Darker red on hover */
+}
+
+/* Style for the toggle button */
+.toggle-button {
+  background-color: #e60012; /* Bright red button */
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.toggle-button:hover {
+  background-color: #c70039; /* Darker red on hover */
+}
+
+/* Style for the grid view */
+kendo-grid {
+  
+  border: 1px solid #e60012; /* Red border for grid */
+  border-radius: 5px !important;
+  overflow: hidden  !important;
+}
+
+/* Style for the list view */
+.list-view {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.list-view th, .list-view td {
+  padding: 10px;
+  border-bottom: 1px solid #e60012 !important; /* Red border for table rows */
+}
+
+.list-view th {
+  background-color:rgba(5, 0, 0, 0.4); /* Red background for table headers */
+  color: #fff;
+}
+
+.list-view tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.1); /* Slightly visible background for rows */
+}
+
+.list-view tr:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Light hover effect for rows */
+}
+/* Style for the grid view */
+kendo-grid {
+  background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white background */
+  border: 1px solid #e60012 !important; /* Red border for grid */
+  border-radius: 5px  !important;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  color: #fff; /* White text for better contrast */
+}
+
+kendo-grid .k-grid-header {
+  background-color: rgba(5, 0, 0, 0.6); /* Dark red background for header */
+  color: #fff;
+}
+
+kendo-grid .k-header {
+  background-color: rgba(5, 0, 0, 0.6); /* Dark red background for header cells */
+  color: #fff;
+  font-weight: bold;
+  border-bottom: 2px solid #e60012 !important; /* Red bottom border for header cells */
+  text-align: center  !important;
+}
+
+kendo-grid .k-grid-header .k-header {
+  border-left: 1px solid #e60012; /* Red left border for header cells */
+}
+
+kendo-grid .k-grid-content {
+  background-color: rgba(255, 255, 255, 0.05); /* Slightly transparent white background for grid rows */
+}
+
+kendo-grid .k-grid-content tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.1); /* Slightly visible background for even rows */
+}
+
+kendo-grid .k-grid-content tr:nth-child(odd) {
+  background-color: rgba(255, 255, 255, 0.15); /* Slightly more visible background for odd rows */
+}
+
+kendo-grid .k-grid-content tr:hover {
+  background-color: rgba(255, 255, 255, 0.3); /* Light hover effect for rows */
+  cursor: pointer;
+}
+
+kendo-grid .k-grid-content td {
+  text-align: center;
+  padding: 10px;
+  border-left: 1px solid #e60012; /* Red left border for grid cells */
+  border-bottom: 1px solid #e60012; /* Red bottom border for grid cells */
+}
+
+kendo-grid .k-grid-content td:first-child {
+  border-left: none; /* Remove left border from the first cell */
+}
+
+kendo-grid .k-grid-content td:last-child {
+  border-right: none; /* Remove right border from the last cell */
+}
+
+kendo-grid .k-pager-wrap {
+  background-color: rgba(5, 0, 0, 0.4); /* Dark red background for pager */
+  color: #fff;
+  border-top: 1px solid #e60012; /* Red top border for pager */
+  padding: 10px;
+  border-radius: 0 0 5px 5px;
+}
+
+kendo-grid .k-pager-nav {
+  color: #fff;
+}
+
+
+/* General Kendo Grid Styling with Black Font Color */
+::ng-deep kendo-grid {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #e60012 !important;
+  border-radius: 5px;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  color: #000; /* Set text color to black */
+}
+
+/* Header Styling */
+::ng-deep kendo-grid .k-grid-header {
+  background-color: rgba(5, 0, 0, 0.6);
+  color: #fff; /* Header text remains white for contrast */
+}
+
+/* Header Cells Styling */
+::ng-deep kendo-grid .k-header {
+  background-color: rgba(5, 0, 0, 0.6);
+  color: #fff; /* Header cell text remains white for contrast */
+  font-weight: bold;
+  border-bottom: 2px solid #e60012 !important;
+  text-align: center;
+}
+
+/* Grid Content Styling */
+::ng-deep kendo-grid .k-grid-content {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #000; /* Set text color to black */
+}
+
+/* Alternating Row Background Colors */
+::ng-deep kendo-grid .k-grid-content tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.01);
+}
+
+::ng-deep kendo-grid .k-grid-content tr:nth-child(odd) {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Hover Effect */
+::ng-deep kendo-grid .k-grid-content tr:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+/* Grid Cells Styling */
+::ng-deep kendo-grid .k-grid-content td {
+  text-align: center;
+  padding: 10px;
+  border-left: 1px solid #e60012;
+  border-bottom: 1px solid #e60012;
+  color: #000; /* Set text color to black */
+}
+
+/* Pager Styling */
+::ng-deep kendo-grid .k-pager-wrap {
+  background-color: rgba(5, 0, 0, 0.4);
+  color: #000; /* Set text color to black in pager */
+  border-top: 1px solid #e60012;
+  padding: 10px;
+  border-radius: 0 0 5px 5px;
+}
+
+/* Selected Row Styling */
+::ng-deep kendo-grid .k-state-selected {
+  background-color: #e60012 !important;
+  color: #fff !important; /* Selected row text remains white for contrast */
+}
+.driver-section input[type="text"][placeholder="Search drivers..."] {
+  width: 10%;
+  padding: 10px;
+  align-items: center;
+  margin-left: 70px;
+  border: 1px solid #e60012; /* Red border for the search input */
+  border-radius: 5px;
+  background-color: #fff;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+/* Style for the search button */
+.search-button {
+  background-color: #e60012; /* Bright red button */
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  
+}
+
+.search-button:hover {
+  background-color: #c70039; /* Darker red on hover */
+}
+
+/* Ensure the search button is placed correctly */
+.driver-section .search-container {
+  margin-bottom: 20px;
+}

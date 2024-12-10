@@ -1,0 +1,75 @@
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('https://i.imgur.com/jyUo41z.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #ffffff;
+}
+
+/* Navbar Styles */
+nav {
+  background-color: rgba(0, 0, 0, 0.8); /* Dark transparent background */
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  border-bottom: 3px solid #ff0000; /* Racing red bottom border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 0 15px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s, border-bottom 0.3s;
+  position: relative;
+}
+
+nav a:hover,
+nav a.active {
+  color: #ff0000; /* Racing red */
+  border-bottom: 3px solid #ff0000;
+}
+
+nav a::before {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #ff0000; /* Racing red */
+  transition: width 0.3s ease-in-out;
+}
+
+nav a:hover::before,
+nav a.active::before {
+  width: 100%;
+}
+
+/* Router Outlet Margin */
+router-outlet {
+  display: block;
+  padding-top: 70px; /* To prevent content overlap with fixed navbar */
+}
+
+/* Additional Styles */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+  z-index: -1;
+}
+

@@ -1,0 +1,39 @@
+<!-- Hero Section -->
+<body>
+<section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to the F1 Racing Hub!</h1>
+      <p>Experience the thrill of Formula 1 like never before. Get the latest updates, race schedules, and team information right here.</p>
+      <button (click)="navigateTo('schedule')">View Race Schedule</button>
+      <button (click)="navigateTo('teams')">Meet the Teams</button>
+    </div>
+  </section>
+  
+  <!-- Featured Races -->
+  <div class="h11">
+  <section class="featured-races">
+    <h2>Featured Races</h2>
+    <div class="race-cards">
+      <div class="race-card" *ngFor="let race of featuredRaces">
+        <img [src]="race.imageUrl" alt="{{ race.name }}">
+        <h3>{{ race.name }}</h3>
+        <p>{{ race.date | date }}</p><br>
+        <button (click)="navigateTo(race.detailsLink)">Learn More</button>
+      </div>
+    </div>
+  </section>
+</div>
+  
+  
+  <section class="latest-news">
+    <h2>Latest News</h2>
+    <ul>
+      <li *ngFor="let newsItem of news">
+        <a [href]="newsItem.link" target="_blank">{{ newsItem.title }}</a>
+      </li>
+    </ul>
+  </section>
+</body>
+  
+
+ 

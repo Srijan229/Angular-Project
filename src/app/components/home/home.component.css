@@ -1,0 +1,160 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  
+  
+  }
+  img{
+    padding-bottom: 40px;
+  }
+  
+
+  .hero {
+   
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+
+      background: url('https://i.imgur.com/jyUo41z.jpg');
+  }
+  .h11
+  {
+    background: url('https://t4.ftcdn.net/jpg/06/48/13/41/360_F_648134127_mJ2fSyHYDOFkXcUc4FYUhO3RbMi5rNrD.jpg');
+  }
+  
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+  }
+  
+  .hero-content button {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .hero-content button:hover {
+    background-color: #cc0000;
+    transform: scale(1.05);
+  }
+  
+ 
+  .featured-races {
+    padding: 40px 20px;
+    background-color: transparent;
+    background: url('https://wallpapers.com/images/hd/formula-1-desktop-v4j4pmz844ndzw0t.jpg');
+  }
+  
+  .featured-races h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ff0000; 
+  }
+  
+  .race-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    
+  }
+  
+  .race-card {
+    background-color:rgba(255, 255, 255, 0.4);
+    border: 2px solid #ff0000;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .race-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .race-card h3 {
+    margin: 15px 0;
+    color: #ff0000;
+  }
+  
+  .race-card p {
+    margin: 0;
+    padding: 0 15px;
+  }
+  
+  .race-card button {
+    background-color: #ff0000; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .race-card button:hover {
+    background-color: #cc0000;
+    transform: scale(1.05);
+  }
+  
+  /* Latest News */
+  .latest-news {
+    padding: 20px;
+    background-color: #f8f8f8;
+  }
+  
+  .latest-news h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ff0000; /* Racing red */
+  }
+  
+  .latest-news ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .latest-news li {
+    margin: 10px 0;
+  }
+  
+  .latest-news a {
+    color: #ff0000; /* Racing red */
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .latest-news a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }

@@ -1,0 +1,120 @@
+/* Apply background GIF to the entire screen */
+html, body {
+  height: 100% !important;
+  margin: 0 !important;
+}
+
+body {
+  
+  background-size: cover !important;
+  font-family: 'Arial', sans-serif !important;
+  color: #fff !important;
+}
+
+/* Styling the filter container */
+.filter-container {
+  background: url('https://images5.alphacoders.com/939/939125.jpg') no-repeat center -450px !important;
+  background-size: cover !important;
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  padding: 20px !important;
+  border-radius: 10px !important;
+  margin-bottom: 3px !important;
+  box-shadow: 0 0 10px #ff0000 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  position: relative !important;
+}
+
+/* Styling the filter elements */
+.filter-container label,
+.filter-container select,
+.filter-container input {
+  color: white !important;
+  font-weight: bold !important;
+  margin: 10px 0 !important;
+}
+
+/* Add spacing between search and filter sections */
+.filter-container input[type="text"],
+.filter-container select,
+.filter-container input[type="number"] {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  border: 1px solid white !important;
+  border-radius: 5px !important;
+  padding: 5px !important;
+  color: #ff0000 !important;
+}
+
+.filter-container button {
+  background-color: #ff00007a !important;
+  border: none !important;
+  padding: 10px 15px !important;
+  cursor: pointer !important;
+  transition: background-color 0.3s ease !important;
+}
+
+.filter-container button:hover {
+  background-color: #ff4d4d !important;
+}
+
+/* Override Kendo Grid Styles */
+.k-grid {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  border: 2px solid #ff0000 !important;
+  color: #fff !important;
+}
+
+.k-grid-header {
+  background-color: #000 !important;
+  color: #ff0000 !important;
+}
+
+.k-grid-header .k-header {
+  font-weight: bold !important;
+  text-transform: uppercase !important;
+  border-bottom: 2px solid #ff0000 !important;
+  color: #ff0000 !important;
+}
+
+.k-grid-content {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  color: #fff !important;
+}
+
+.k-grid-content .k-grid-cell {
+  border-bottom: 1px solid #ff0000 !important;
+  color: #fff !important;
+}
+
+.k-grid .k-alt {
+  background-color: rgba(255, 0, 0, 0.1) !important;
+}
+
+.k-grid .k-state-selected {
+  background-color: #ff0000 !important;
+  color: #fff !important;
+}
+
+.k-pager-wrap {
+  background-color: #000 !important;
+  border-top: 2px solid #ff0000 !important;
+}
+
+.k-pager-wrap .k-link {
+  color: #ff0000 !important;
+}
+
+.k-pager-wrap .k-link:hover {
+  color: #ff4d4d !important;
+}
+
+.k-button {
+  background-color: #ff0000 !important;
+  border: none !important;
+  color: #fff !important;
+}
+
+.k-button:hover {
+  background-color: #ff4d4d !important;
+  color: #fff !important;
+}
